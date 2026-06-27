@@ -1,4 +1,4 @@
-const GAS_WEB_APP_URL = 'ここにGASのウェブアプリURLを貼る';
+const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycby5b-0mifuB6BwE-fnKc7fnByFx-7T71wyA4E7EC1ESsijOgMlDkR1iLsRJlRayoKLv/exec';
 
 const GUEST_ID = 'taro';
 const GUEST_KEY = 'taro-20270321';
@@ -55,7 +55,7 @@ function jsonp(params) {
       script.remove();
     };
 
-    script.src = `${https://script.google.com/macros/s/AKfycby5b-0mifuB6BwE-fnKc7fnByFx-7T71wyA4E7EC1ESsijOgMlDkR1iLsRJlRayoKLv/exec}?${query}`;
+    script.src = `${GAS_WEB_APP_URL}?${query}`;
     script.onerror = () => {
       reject(new Error('通信に失敗しました。'));
       delete window[callbackName];

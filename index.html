@@ -1,97 +1,77 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>祐輔と愛佳の結婚式ご招待</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section id="messagePage" class="message-page">
-    <div class="message-card">
-      <p class="small">Wedding Invitation</p>
-      <h1>祐輔 & 愛佳</h1>
-      <p class="message">
-        この度、祐輔と愛佳は結婚することになりました。<br>
-        今後もよろしくお願いします。
-      </p>
-      <p class="tap">Tap to Open</p>
+
+<section id="messagePage" class="message-page">
+  <div class="message-card">
+    <p class="label">Wedding Invitation</p>
+    <h1>祐輔 & 愛佳</h1>
+    <p>
+      この度、祐輔と愛佳は結婚することになりました。<br>
+      今後もよろしくお願いします。
+    </p>
+    <p class="tap">Tap to Open</p>
+  </div>
+</section>
+
+<main id="invitationPage" class="hidden">
+  <img class="hero" src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=80">
+
+  <section class="card center">
+    <p><span id="guestName">ゲスト</span> 様</p>
+    <h2>ご招待状</h2>
+    <p>皆様に見守られながら、結婚式を挙げることとなりました。</p>
+  </section>
+
+  <section class="card center">
+    <h2>当日まで</h2>
+    <div id="countdown" class="countdown"></div>
+  </section>
+
+  <section class="card">
+    <h2>会場</h2>
+    <p class="venue">キンプトン新宿東京</p>
+    <iframe class="map" src="https://www.google.com/maps?q=キンプトン新宿東京&output=embed"></iframe>
+  </section>
+
+  <section class="card">
+    <h2>会場までの行き方</h2>
+    <div class="video-box">
+      行き方動画をここに掲載できます
     </div>
   </section>
 
-  <main id="invitationPage" class="invitation hidden">
-    <section class="hero">
-      <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=80" alt="新郎新婦の仮写真">
-    </section>
+  <section id="formArea" class="card">
+    <h2>出欠のご回答</h2>
 
-    <section class="card center">
-      <p class="guest-name"><span id="guestName">結婚太郎</span> 様</p>
-      <h2>ご招待状</h2>
-      <p>
-        私たちは結婚式を挙げることとなりました。<br>
-        ぜひご出席いただけますと幸いです。
-      </p>
-    </section>
+    <form id="rsvpForm">
+      <input id="name" type="text" placeholder="氏名" required>
+      <input id="email" type="email" placeholder="メールアドレス" required>
 
-    <section class="card center">
-      <h2>当日まで</h2>
-      <div id="countdown" class="countdown">読み込み中...</div>
-    </section>
+      <select id="status" required>
+        <option value="">出欠を選択</option>
+        <option value="attend">出席</option>
+        <option value="absent">欠席</option>
+      </select>
 
-    <section class="card">
-      <h2>会場</h2>
-      <p class="venue">キンプトン新宿東京</p>
-      <div class="map-wrap">
-        <iframe
-          src="https://www.google.com/maps?q=キンプトン新宿東京&output=embed"
-          loading="lazy">
-        </iframe>
-      </div>
-    </section>
+      <button type="submit">送信する</button>
+    </form>
 
-    <section class="card">
-      <h2>会場までの行き方</h2>
-      <div class="video-placeholder">
-        <p>ここに行き方動画を掲載できます</p>
-        <small>本番ではYouTube埋め込みURLなどに差し替えます</small>
-      </div>
-    </section>
+    <p id="formMessage"></p>
+  </section>
 
-    <section class="card" id="formArea">
-      <h2>出欠のご回答</h2>
+  <section id="submittedMessage" class="card center hidden">
+    <h2>ご回答ありがとうございます</h2>
+    <p class="thanks">ご来場お待ちしております！</p>
+  </section>
+</main>
 
-      <form id="rsvpForm">
-        <label>
-          氏名
-          <input type="text" id="name" value="結婚太郎" required />
-        </label>
-
-        <label>
-          メールアドレス
-          <input type="email" id="email" required />
-        </label>
-
-        <label>
-          ご出欠
-          <select id="status" required>
-            <option value="">選択してください</option>
-            <option value="attend">出席</option>
-            <option value="absent">欠席</option>
-          </select>
-        </label>
-
-        <button type="submit">送信する</button>
-      </form>
-
-      <p id="formMessage"></p>
-    </section>
-
-    <section class="card center hidden" id="submittedMessage">
-      <h2>ご回答ありがとうございます</h2>
-      <p class="thanks">ご来場お待ちしております！</p>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

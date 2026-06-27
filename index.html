@@ -3,429 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Invitation | Yusuke & Aika</title>
-
-  <style>
-    :root {
-      --main: #b88a6a;
-      --sub: #f7efe8;
-      --text: #3f332b;
-      --white: #fffdfb;
-      --line: #e7d7ca;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Hiragino Mincho ProN", "Yu Mincho", serif;
-      background: linear-gradient(180deg, #fffaf6, #f3e6dc);
-      color: var(--text);
-    }
-
-    .message-page {
-      min-height: 100vh;
-      padding: 32px 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: radial-gradient(circle at top, #fff 0%, #f5e4d8 60%, #ead2c3 100%);
-      cursor: pointer;
-    }
-
-    .message-card {
-      width: 100%;
-      max-width: 420px;
-      padding: 42px 28px;
-      background: rgba(255,255,255,0.86);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      box-shadow: 0 18px 40px rgba(115, 75, 45, 0.16);
-    }
-
-    .message-card h1 {
-      font-size: 28px;
-      letter-spacing: 0.08em;
-      margin: 0 0 24px;
-      color: var(--main);
-    }
-
-    .message-card p {
-      line-height: 2;
-      font-size: 16px;
-    }
-
-    .tap {
-      margin-top: 28px;
-      font-size: 12px;
-      letter-spacing: 0.15em;
-      color: #8f7565;
-    }
-
-    .invitation {
-      display: none;
-      max-width: 480px;
-      margin: 0 auto;
-      background: var(--white);
-      min-height: 100vh;
-      box-shadow: 0 0 30px rgba(0,0,0,0.08);
-    }
-
-    .hero {
-      height: 360px;
-      background-image:
-        linear-gradient(rgba(0,0,0,0.12), rgba(0,0,0,0.25)),
-        url("https://images.unsplash.com/photo-1529634597503-139d3726fed5?auto=format&fit=crop&w=1200&q=80");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: end;
-      justify-content: center;
-      padding: 28px;
-      color: white;
-      text-align: center;
-    }
-
-    .hero h2 {
-      font-size: 34px;
-      letter-spacing: 0.08em;
-      margin: 0;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
-    }
-
-    .hero p {
-      margin: 8px 0 0;
-      font-size: 14px;
-      letter-spacing: 0.18em;
-    }
-
-    section {
-      padding: 34px 24px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-title {
-      text-align: center;
-      color: var(--main);
-      font-size: 20px;
-      margin: 0 0 20px;
-      letter-spacing: 0.08em;
-    }
-
-    .countdown {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-      text-align: center;
-    }
-
-    .time-box {
-      background: var(--sub);
-      border-radius: 16px;
-      padding: 14px 4px;
-    }
-
-    .time-box strong {
-      font-size: 24px;
-      display: block;
-      color: var(--main);
-    }
-
-    .time-box span {
-      font-size: 11px;
-    }
-
-    .info {
-      line-height: 1.9;
-      text-align: center;
-      font-size: 15px;
-    }
-
-    iframe {
-      width: 100%;
-      border: 0;
-      border-radius: 18px;
-      margin-top: 16px;
-    }
-
-    .video-box {
-      aspect-ratio: 16 / 9;
-      border-radius: 18px;
-      overflow: hidden;
-      background: #ddd;
-    }
-
-    .video-box iframe {
-      height: 100%;
-      margin-top: 0;
-      border-radius: 0;
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    label {
-      font-size: 13px;
-      color: #735b4c;
-    }
-
-    input, select, textarea, button {
-      width: 100%;
-      font-size: 16px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      padding: 13px;
-      font-family: inherit;
-    }
-
-    input[readonly] {
-      background: #f8f1ec;
-    }
-
-    button {
-      background: var(--main);
-      color: white;
-      border: none;
-      font-weight: bold;
-      letter-spacing: 0.08em;
-      margin-top: 8px;
-    }
-
-    .thanks, .error {
-      display: none;
-      text-align: center;
-      font-size: 18px;
-      line-height: 2;
-      color: var(--main);
-      padding: 24px 8px;
-    }
-
-    .error {
-      color: #b94a48;
-    }
-
-    footer {
-      padding: 28px;
-      text-align: center;
-      font-size: 12px;
-      color: #8f7565;
-    }
-  </style>
+  <title>祐輔と愛佳の結婚式ご招待</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="message-page" id="messagePage">
+  <section id="messagePage" class="message-page">
     <div class="message-card">
-      <h1>ご報告</h1>
-      <p>
-        この度、祐輔と愛佳は<br>
-        結婚することになりました。<br>
+      <p class="small">Wedding Invitation</p>
+      <h1>祐輔 & 愛佳</h1>
+      <p class="message">
+        この度、祐輔と愛佳は結婚することになりました。<br>
         今後もよろしくお願いします。
       </p>
-      <div class="tap">TAP TO OPEN</div>
+      <p class="tap">Tap to Open</p>
     </div>
-  </div>
+  </section>
 
-  <main class="invitation" id="invitation">
-    <div class="hero">
-      <div>
-        <h2>Yusuke & Aika</h2>
-        <p>Wedding Invitation</p>
-      </div>
-    </div>
-
-    <section>
-      <h3 class="section-title">COUNTDOWN</h3>
-      <div class="countdown">
-        <div class="time-box"><strong id="days">0</strong><span>Days</span></div>
-        <div class="time-box"><strong id="hours">0</strong><span>Hours</span></div>
-        <div class="time-box"><strong id="minutes">0</strong><span>Minutes</span></div>
-        <div class="time-box"><strong id="seconds">0</strong><span>Seconds</span></div>
-      </div>
+  <main id="invitationPage" class="invitation hidden">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=1200&q=80" alt="新郎新婦の仮写真">
     </section>
 
-    <section>
-      <h3 class="section-title">PLACE</h3>
-      <div class="info">
-        <strong>キンプトン新宿東京</strong><br>
-        東京都新宿区西新宿3-4-7
-      </div>
-
-      <iframe
-        height="260"
-        loading="lazy"
-        src="https://www.google.com/maps?q=キンプトン新宿東京&output=embed">
-      </iframe>
+    <section class="card center">
+      <p class="guest-name"><span id="guestName">結婚太郎</span> 様</p>
+      <h2>ご招待状</h2>
+      <p>
+        私たちは結婚式を挙げることとなりました。<br>
+        ぜひご出席いただけますと幸いです。
+      </p>
     </section>
 
-    <section>
-      <h3 class="section-title">ACCESS MOVIE</h3>
-      <div class="video-box">
+    <section class="card center">
+      <h2>当日まで</h2>
+      <div id="countdown" class="countdown">読み込み中...</div>
+    </section>
+
+    <section class="card">
+      <h2>会場</h2>
+      <p class="venue">キンプトン新宿東京</p>
+      <div class="map-wrap">
         <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Access movie"
-          allowfullscreen>
+          src="https://www.google.com/maps?q=キンプトン新宿東京&output=embed"
+          loading="lazy">
         </iframe>
       </div>
     </section>
 
-    <section>
-      <h3 class="section-title">RSVP</h3>
+    <section class="card">
+      <h2>会場までの行き方</h2>
+      <div class="video-placeholder">
+        <p>ここに行き方動画を掲載できます</p>
+        <small>本番ではYouTube埋め込みURLなどに差し替えます</small>
+      </div>
+    </section>
+
+    <section class="card" id="formArea">
+      <h2>出欠のご回答</h2>
 
       <form id="rsvpForm">
-        <div>
-          <label>お名前</label>
-          <input type="text" name="name" id="name" readonly />
-        </div>
+        <label>
+          氏名
+          <input type="text" id="name" value="結婚太郎" required />
+        </label>
 
-        <div>
-          <label>メールアドレス</label>
-          <input type="email" name="email" id="email" readonly />
-        </div>
+        <label>
+          メールアドレス
+          <input type="email" id="email" required />
+        </label>
 
-        <div>
-          <label>出欠</label>
-          <select name="attendance" id="attendance" required>
+        <label>
+          ご出欠
+          <select id="status" required>
             <option value="">選択してください</option>
-            <option value="出席">出席</option>
-            <option value="欠席">欠席</option>
+            <option value="attend">出席</option>
+            <option value="absent">欠席</option>
           </select>
-        </div>
-
-        <div>
-          <label>メッセージ</label>
-          <textarea name="message" id="message" rows="4" placeholder="任意"></textarea>
-        </div>
+        </label>
 
         <button type="submit">送信する</button>
       </form>
 
-      <div class="thanks" id="thanks">
-        ご回答ありがとうございます。<br>
-        ご来場お待ちしております！
-      </div>
-
-      <div class="error" id="error">
-        招待URLが正しくありません。<br>
-        新郎新婦にご確認ください。
-      </div>
+      <p id="formMessage"></p>
     </section>
 
-    <footer>
-      2027.03.21<br>
-      With love, Yusuke & Aika
-    </footer>
+    <section class="card center hidden" id="submittedMessage">
+      <h2>ご回答ありがとうございます</h2>
+      <p class="thanks">ご来場お待ちしております！</p>
+    </section>
   </main>
 
-  <script>
-    const GAS_URL = "https://script.google.com/macros/s/AKfycbw7Ah6JGXqv5oIzd25y8t-30rOrckgkYOmLGfmKDq6V7cCn2f4eFz3Lbk-8Ee6CAYhm/exec";
-    const weddingDate = new Date("2027-03-21T10:00:00+09:00");
-
-    const messagePage = document.getElementById("messagePage");
-    const invitation = document.getElementById("invitation");
-    const form = document.getElementById("rsvpForm");
-    const thanks = document.getElementById("thanks");
-    const errorBox = document.getElementById("error");
-
-    const params = new URLSearchParams(location.search);
-    const guestId = params.get("id");
-
-    messagePage.addEventListener("click", () => {
-      messagePage.style.display = "none";
-      invitation.style.display = "block";
-      window.scrollTo(0, 0);
-      loadGuest();
-    });
-
-    function updateCountdown() {
-      const now = new Date();
-      const diff = weddingDate - now;
-
-      if (diff <= 0) return;
-
-      document.getElementById("days").textContent = Math.floor(diff / (1000 * 60 * 60 * 24));
-      document.getElementById("hours").textContent = Math.floor(diff / (1000 * 60 * 60)) % 24;
-      document.getElementById("minutes").textContent = Math.floor(diff / (1000 * 60)) % 60;
-      document.getElementById("seconds").textContent = Math.floor(diff / 1000) % 60;
-    }
-
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-
-    function jsonp(params) {
-      return new Promise((resolve, reject) => {
-        const callbackName = "callback_" + Date.now();
-        params.callback = callbackName;
-
-        window[callbackName] = data => {
-          resolve(data);
-          delete window[callbackName];
-          script.remove();
-        };
-
-        const script = document.createElement("script");
-        script.src = GAS_URL + "?" + new URLSearchParams(params).toString();
-        script.onerror = reject;
-        document.body.appendChild(script);
-      });
-    }
-
-    async function loadGuest() {
-      if (!guestId) {
-        showError();
-        return;
-      }
-
-      const result = await jsonp({
-        action: "check",
-        id: guestId
-      });
-
-      if (result.status !== "ok") {
-        showError();
-        return;
-      }
-
-      document.getElementById("name").value = result.name;
-      document.getElementById("email").value = result.email;
-
-      if (result.answered) {
-        showThanks();
-      }
-    }
-
-    function showThanks() {
-      form.style.display = "none";
-      thanks.style.display = "block";
-    }
-
-    function showError() {
-      form.style.display = "none";
-      thanks.style.display = "none";
-      errorBox.style.display = "block";
-    }
-
-    form.addEventListener("submit", async e => {
-      e.preventDefault();
-
-      const result = await jsonp({
-        action: "register",
-        id: guestId,
-        attendance: document.getElementById("attendance").value,
-        message: document.getElementById("message").value
-      });
-
-      if (result.status === "ok") {
-        showThanks();
-      } else {
-        alert("送信に失敗しました。");
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbw2WrFuXIV-TPbjK-ifO41FmRghgK7LW6ks_4DUL1g-7GNBYft7ksG57bpDtlK1fOk/exec';
+const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz5aBPoCfNWZqgLqbgepx1zX-v1PTPFULkdtFngt86BiwNKFi4IxeZoVNUYCo0HE-0g/exec';
 
 const messagePage = document.getElementById('messagePage');
 const invitationPage = document.getElementById('invitationPage');
